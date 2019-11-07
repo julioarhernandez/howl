@@ -6,7 +6,7 @@ import SendIcon from '@material-ui/icons/Send';
 import Typography from '@material-ui/core/Typography';
 import useStyles from './item-styles';
 
-const Item = ({icon, title, subtitle, description}) => {
+const Item = ({icon, title, subtitle, subtitleFragment, time }) => {
     const classes = useStyles();
     return ( 
     <ListItem alignItems="flex-start">
@@ -14,7 +14,7 @@ const Item = ({icon, title, subtitle, description}) => {
             <SendIcon />
         </ListItemIcon>
         <ListItemText
-        primary="Brunch this weekend?"
+        primary={title}
         secondary={
             <React.Fragment>
             <Typography
@@ -23,15 +23,15 @@ const Item = ({icon, title, subtitle, description}) => {
                 className={classes.inline}
                 color="textPrimary"
             >
-                Ali Connors
+                {subtitle}
             </Typography>
-            {" — I'll be in your neighborhood doing errands this…"}
+            {` —  ${subtitleFragment}`}
             </React.Fragment>
         }
         />
         <ListItemText
         className={classes.shrink}
-        secondary="30 days"
+        secondary={time}
         />
     </ListItem>
      );
