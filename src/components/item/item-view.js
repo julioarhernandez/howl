@@ -25,7 +25,7 @@ const Item = ({icon, title, subtitle, subtitleFragment, time }) => {
             >
                 {subtitle}
             </Typography>
-            {` —  ${subtitleFragment}`}
+            {` —  $${subtitleFragment}`}
             </React.Fragment>
         }
         />
