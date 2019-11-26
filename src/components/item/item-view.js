@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
@@ -36,4 +37,13 @@ const Item = ({icon, title, subtitle, subtitleFragment, time }) => {
     </ListItem>
      );
 }
+
+Component.PropTypes = {
+    icon: PropTypes.string,
+    title: PropTypes.string.isRequired,
+    subtitle: PropTypes.string.isRequired,
+    subtitleFragment: PropTypes.string.isRequired,
+    time: PropTypes.string.isRequired,
+};
+
 export default Item;
