@@ -5,7 +5,9 @@ const useStyles = makeStyles(theme => ({
         display: 'inline',
     },
     shrink: {
-        flexShrink: 0,
+        flexShrink: 1,
+        flexGrow: 0,
+        whiteSpace: 'nowrap'
     }
 }));
 export default useStyles;
