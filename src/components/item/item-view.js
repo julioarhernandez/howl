@@ -12,7 +12,7 @@ const Item = ({icon, title, subtitle, subtitleFragment, time }) => {
     return ( 
     <ListItem alignItems="flex-start">
         <ListItemIcon>
-            <SendIcon />
+            <SendIcon color="secondary"/>
         </ListItemIcon>
         <ListItemText
         primary={title}
