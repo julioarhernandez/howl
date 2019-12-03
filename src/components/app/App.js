@@ -1,21 +1,12 @@
 import React from 'react';
-import { makeStyles} from '@material-ui/core/styles';
 import Header from '../header';
 import AddIcon from '@material-ui/icons/Add';
 import Fab from '@material-ui/core/Fab';
 import ItemList from '../itemList';
-import './App.css';
+import useStyles from './app-styles';
 
-const appStyles = makeStyles(theme => ({
-    fab: {
-        position: 'absolute',
-        bottom: theme.spacing(2),
-        right: theme.spacing(2),
-        color: 'secondary'
-    }
-}));
 const App = () => {
-    const classes = appStyles();
+    const classes = useStyles();
     const itemArray = [
         {
             title: "Lorem Ipsum name product",
@@ -28,6 +19,12 @@ const App = () => {
             subtitle: "Walmart",
             subtitleFragment: "10.23",
             time: "5 days"
+        },
+        {
+            title: "Ipsum Lorem name product",
+            subtitle: "Exp Lane",
+            subtitleFragment: "0",
+            time: "39 min"
         },
     ];
     return (
