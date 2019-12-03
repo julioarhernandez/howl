@@ -3,12 +3,13 @@ import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
+import Badge from '@material-ui/core/Badge';
 import IconButton from '@material-ui/core/IconButton';
+import TimerIcon from '@material-ui/icons/Timer';
 import MenuIcon from '@material-ui/icons/Menu';
 import useStyles from './header-styles';
 
-const Header = ({title}) => {
+const Header = ({title, counter}) => {
     const classes = useStyles();
     return ( 
         <AppBar position="static">
@@ -19,13 +20,18 @@ const Header = ({title}) => {
                 <Typography variant="h6" className={classes.title}>
                     {title}
                 </Typography>
-                <Button color="inherit">{title}</Button>
+                {counter &&
+                    <Badge color="secondary" badgeContent={counter}>
+                        <TimerIcon />
+                    </Badge>
+                }
             </Toolbar>
         </AppBar>
      );
 }
 
 Component.PropTypes = {
-    title: PropTypes.string.isRequired
+    title: PropTypes.string.isRequired,
+    counter: PropTypes.string
 };
 export default Header;
