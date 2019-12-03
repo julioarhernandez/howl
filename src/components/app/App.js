@@ -1,26 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
+import Header from '../header';
+import ItemList from '../itemList';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+const App = () => {
+    const itemArray = [
+        {
+            title: "Lorem Ipsum name product",
+            subtitle: "Costco",
+            subtitleFragment: "9.44",
+            time: "30 days"
+        },
+        {
+            title: "Ipsum Lorem name product",
+            subtitle: "Walmart",
+            subtitleFragment: "10.23",
+            time: "5 days"
+        },
+    ];
+    return (
+        <>
+            <Header title="Howl" counter="2"/>
+            <ItemList items={itemArray}/>
+        </>
+    );
 }
 
 export default App;
