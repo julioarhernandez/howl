@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
-import SendIcon from '@material-ui/icons/Send';
+import WatchLaterOutlinedIcon from '@material-ui/icons/WatchLaterOutlined';
 import Typography from '@material-ui/core/Typography';
 import useStyles from './item-styles';
 
@@ -11,8 +11,8 @@ const Item = ({icon, title, subtitle, subtitleFragment, time }) => {
     const classes = useStyles();
     return ( 
     <ListItem alignItems="flex-start">
-        <ListItemIcon>
-            <SendIcon color="secondary"/>
+        <ListItemIcon className={classes.leftIcon}>
+            <WatchLaterOutlinedIcon color="secondary"/>
         </ListItemIcon>
         <ListItemText
         primary={title}
