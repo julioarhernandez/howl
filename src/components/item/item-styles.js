@@ -8,6 +8,9 @@ const useStyles = makeStyles(theme => ({
         flexShrink: 1,
         flexGrow: 0,
         whiteSpace: 'nowrap'
+    },
+    leftIcon: {
+        minWidth: '45px'
     }
 }));
 export default useStyles;

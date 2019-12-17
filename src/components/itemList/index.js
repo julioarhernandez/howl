@@ -1,2 +1,2 @@
-import Item from './item-view';
-export default Item;
+import ItemList from './itemList-view';
+export default ItemList;
