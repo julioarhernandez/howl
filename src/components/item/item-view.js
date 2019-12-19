@@ -38,7 +38,7 @@ const Item = ({icon, title, subtitle, subtitleFragment, time }) => {
      );
 }
 
-Component.PropTypes = {
+Component.propTypes = {
     icon: PropTypes.string,
     title: PropTypes.string.isRequired,
     subtitle: PropTypes.string.isRequired,

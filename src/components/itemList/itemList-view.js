@@ -20,7 +20,7 @@ const ItemList = ({ items }) => {
     </List>
      );
 }
-Component.PropTypes = {
+Component.propTypes = {
     items: PropTypes.shape({
         title: PropTypes.string.isRequired,
         subtitle: PropTypes.string,

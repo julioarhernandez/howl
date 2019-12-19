@@ -34,7 +34,7 @@ const Header = ({title, counter, backLink}) => {
      );
 }
 
-Component.PropTypes = {
+Component.propTypes = {
     title: PropTypes.string.isRequired,
     counter: PropTypes.string,
     backLink: PropTypes.string
