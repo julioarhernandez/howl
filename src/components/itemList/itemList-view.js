@@ -9,12 +9,12 @@ const ItemList = ({ items }) => {
     const classes = useStyles();
     return ( 
     <List className={classes.root}>
-        {items.map((itm)=>{
+        {items.map((itm, index)=>{
             return ( 
-                <>
+                <React.Fragment key={index}>
                     <Item {...itm}></Item>
                     <Divider variant="inset" component="li" />
-                </>
+                </React.Fragment>
             )
         })}
     </List>
