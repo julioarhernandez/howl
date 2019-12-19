@@ -6,6 +6,11 @@ const createStyles = makeStyles(theme => ({
           margin: theme.spacing(1),
           width: 200,
         },
+        '& button': {
+          display: 'flex',
+          margin: 8
+        },
+
       },
 }));
 export default createStyles;
