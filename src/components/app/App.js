@@ -4,6 +4,7 @@ import AddIcon from '@material-ui/icons/Add';
 import Fab from '@material-ui/core/Fab';
 import ItemList from '../itemList';
 import useStyles from './app-styles';
+import storage from "../../helpers/localStorage";
 
 const App = () => {
     const classes = useStyles();
@@ -27,6 +28,9 @@ const App = () => {
             time: "39 min"
         },
     ];
+
+    const localStore = new storage('randomKey');
+
     return (
         <>
             <Header title="Howl" counter="2"/>
@@ -34,7 +38,6 @@ const App = () => {
             <Fab aria-label="Add" className={classes.fab} color="secondary">
                 <AddIcon />
             </Fab>
-            
         </>
     );
 }
