@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import Create from './create-view';
 import { withKnobs } from "@storybook/addon-knobs";
+import {formatDate, formatTime} from "../../helpers/date";
 
 export default {
     title: 'Create Component',
@@ -10,9 +11,9 @@ export default {
 export const CreateTest = () => {
     const submitHandler = (e) =>{
         e.preventDefault();
-        console.log('something', formData);
+        alert(`This is the data received form child ${JSON.stringify(formData)}`);
     }
-    const [formData, setFormData] = useState({data: 'form'})
+    const [formData, setFormData] = useState({date: formatDate(), price: 12, time: formatTime()})
     return <Create submitHandler={submitHandler} formData={formData} setFormData={setFormData} />;
 }
 CreateTest.story = {
