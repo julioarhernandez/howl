@@ -29,8 +29,6 @@ const App = () => {
         },
     ];
 
-    const localStore = new storage('randomKey');
-
     return (
         <>
             <Header title="Howl" counter="2"/>
